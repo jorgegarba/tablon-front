@@ -45,7 +45,7 @@ body {
 	-webkit-animation: lluvia 3s ease 0 infinite normal normal; */
 	background-image: url("./../assets/img/mixtura-amarilla.png");
 	background-size: 100%;
-	animation-name: lluvia;
+	animation-name: lluviabody;
 	animation-duration: 20s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
@@ -62,13 +62,23 @@ body {
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
-@keyframes lluvia {
+@keyframes lluviabody {
 	0% {
 		background-position: 0px 0px, 0px 0px;
 	}
 
 	100% {
 		background-position: 0px 300px, 0px 0px;
+		/* transform: rotate(360deg); */
+	}
+}
+@keyframes lluvia {
+	0% {
+		background-position: 0px 0px, 0px 0px, 0px 0px;
+	}
+
+	100% {
+		background-position: 0px 0px, 0px 300px, 0px 0px;
 		/* transform: rotate(360deg); */
 	}
 }
@@ -194,9 +204,10 @@ body {
 .main {
 	/* max-width: ; */
 	padding-bottom: 10rem;
-	background-image: url("./../assets/img/mixtura-amarilla.png"),
+	background-image: url("./../assets/img/bg_red_original1500_tablin.png"),
+		url("./../assets/img/mixtura-amarilla.png"),
 		url("./../assets/img/bg_red_original1500.png");
-	background-size: 100%, cover;
+	background-size: cover, 100%, cover;
 	padding-top: 6em;
 	animation-name: lluvia;
 	animation-duration: 20s;
@@ -525,17 +536,20 @@ body {
 .salchipapa__mobile {
 	display: none;
 }
-@media screen and (max-width: 1800px) {
+/* query */
+/* @media screen and (max-width: 1800px) {
 	.main {
-		background-image: url("./../assets/img/mixtura-amarilla.png"),
-			url("./../assets/img/bg_red_original1400.png");
+		background-image: url("./../assets/img/bg_red_original1500_tablin.png"),
+			url("./../assets/img/mixtura-amarilla.png"),
+			url("./../assets/img/bg_red_original1500.png");
 	}
-}
+} */
 
 @media screen and (max-width: 1650px) {
 	.main {
-		background-image: url("./../assets/img/mixtura-amarilla.png"),
-			url("./../assets/img/bg_red_original1300.png");
+		background-image: url("./../assets/img/bg_red_original1400_tablin.png"),
+			url("./../assets/img/mixtura-amarilla.png"),
+			url("./../assets/img/bg_red_original1500.png");
 	}
 }
 @media screen and (max-width: 1510px) {
@@ -560,6 +574,11 @@ body {
 	}
 	.hero__title img {
 		max-width: 55%;
+	}
+	.main {
+		background-image: url("./../assets/img/bg_red_original1300_tablin.png"),
+			url("./../assets/img/mixtura-amarilla.png"),
+			url("./../assets/img/bg_red_original1500.png");
 	}
 }
 @media screen and (max-width: 1245px) {
@@ -639,18 +658,12 @@ body {
 		width: 30%;
 	}
 	.main {
-		background-image: url("./../assets/img/mixtura-amarilla.png"),
-			url("./../assets/img/bg_red_original900.png");
+		background-image: url("./../assets/img/bg_red_original900_tablin.png"),
+			url("./../assets/img/mixtura-amarilla.png"),
+			url("./../assets/img/bg_red_original1500.png");
 	}
 }
 @media screen and (max-width: 900px) {
-	.hero__plato:nth-child(3) {
-	}
-	.hero__plato:nth-child(3) img {
-		/* right: 0; */
-	}
-	.hero__plato:nth-child(2) {
-	}
 	.hero__plato:nth-child(2) img {
 		/* right: 0; */
 		width: 95%;
@@ -743,9 +756,9 @@ body {
 	}
 	.main {
 		padding-top: 4rem;
-		background-image: url("./../assets/img/mixtura-amarilla.png"),
+		background-image: url("./../assets/img/bg_red_mobile_borde.png"),
+			url("./../assets/img/mixtura-amarilla.png"),
 			url("./../assets/img/bg_red_mobile.png");
-		/* background-position: center; */
 	}
 	.form__form input[type="date"] {
 		padding: 0.8em 0.6em;
@@ -972,7 +985,7 @@ body {
 	}
 }
 @media screen and (max-width: 480px) {
-	.salchipapa__mobile{
+	.salchipapa__mobile {
 		top: -52rem;
 	}
 	.pollo__mobile {
@@ -992,9 +1005,9 @@ body {
 	.metropizza {
 		width: 100%;
 		bottom: -95px;
-		left: -200px
+		left: -200px;
 	}
-	.broaster img{
+	.broaster img {
 		left: 10;
 	}
 }
